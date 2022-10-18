@@ -1,5 +1,5 @@
-# Assignment3.python by GROUP CS-2102
-# AUTORS: _Miras Shumatov & Aniya Boltabay_
+# Assignment3.python
+# _Autors: Miras Shumatov & Aniya Boltabay, CS-2102_
 
 **- Title:** "NFT Aggregator"
 
