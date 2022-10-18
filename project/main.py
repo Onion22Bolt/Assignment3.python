@@ -1,36 +1,44 @@
 from flask import Flask
-from flask import url_for
 from flask import render_template
 from flask import request
+import psycopg2
+import requests
+
+connection = psycopg2.connect(database="nftaggregator",
+                              user="postgres",
+                              # пароль, который указали при установке PostgreSQL
+                              password="12345",
+                              host="127.0.0.1",
+                              port="5432")
+
+cur = connection.cursor()
+
+
 
 app = Flask(__name__)
-@app.route('/')
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        address = request.form.get('address')
+        # address = '4Jb9EzcUd6k1gC7GSH2iu6H7UcL2ez3NgvAF8n6a1QDs'
+
+        url = 'https://solana-gateway.moralis.io/nft/mainnet/' + address + '/metadata'
+
+        headers = {
+
+            "accept": "application/json",
+            "X-API-Key": "z1SWBbYXT9C5u4QlvAAqxr6q2WIgJWbClpY9o2ESQfdSKOA4VRxTm9WoZmH2Zrnj"
+
+        }
+
+        response = requests.get(url, headers=headers)
+
+        # print(response.text)
+
+        return "<h1>{}</h1>".format(response.text)
+
     return render_template('index.html')
-@app.route('/login')
-def login():
-    return 'login'
-@app.route('/user/<username>')
-def profile(username):
-    return f'{username}\'s profile'
-with app.test_request_context():
-    print(url_for('index'))
-    print(url_for('login'))
-    print(url_for('login', next='/'))
-    print(url_for('profile', username='John Doe'))
 
-
-@app.route('/iam')
-def query_example():
-    # if key doesn't exist, returns None
-    language = request.args.get('language')
-    # if key doesn't exist, returns a 400, bad request error
-    framework = request.args['framework']
-    # if key doesn't exist, returns None
-    website = request.args.get('website')
-    return '''
-              <h1>The language value is: {}</h1>
-              <h1>The framework value is: {}</h1>
-              <h1>The website value is: {}'''.format(language, framework, website)
 if __name__ == '__main__':
    app.run()
