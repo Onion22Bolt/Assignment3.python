@@ -1,7 +1,8 @@
 # Assignment3.python
-** - Title:** "NFT Aggregator"
+**- Title:** "NFT Aggregator"
 
-** - Installation:** 
+**- Installation:**
+
     - 1)Psycopg2 is the most popular PostgreSQL database adapter for the Python programming language.
     
     - 2)Flask provides configuration and conventions, with sensible defaults, to get started. 
@@ -16,6 +17,6 @@
         - import psycopg2
         - import requests
         
-** - Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
+**- Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
 
-** - Examples:** https://solana-gateway.moralis.io/api/#/nft/getNFTMetadata
+**- Examples:** https://solana-gateway.moralis.io/api/#/nft/getNFTMetadata
