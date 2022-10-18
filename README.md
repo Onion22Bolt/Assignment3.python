@@ -4,7 +4,7 @@
 
                 2)Flask provides configuration and conventions, with sensible defaults, to get started. 
 
-                4)render_template is a Flask function from the flask.templating package. render_template is used to generate output from a template file based on the                       Jinja2 engine that is found in the application's templates folder.
+                4)render_template is a Flask function from the flask.templating package. render_template is used to generate output from a template file based on the Jinja2 engine that is found in the application's templates folder.
 
                 6)The request object is a Request subclass and provides all of the attributes Werkzeug defines plus a few Flask specific ones.
 
