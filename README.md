@@ -13,7 +13,7 @@
     
     - 4) The request object is a Request subclass and provides all of the attributes Werkzeug defines plus a few Flask specific ones.
      
-    - 5) pip install -r /path/to/requirements.txt
+    - **pip install -r /path/to/requirements.txt**
         
 **- Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
 
