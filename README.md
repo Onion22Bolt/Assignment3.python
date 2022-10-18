@@ -17,6 +17,6 @@
         - import psycopg2
         - import requests
         
-**- Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
+**-  Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
 
 **- Examples:** https://solana-gateway.moralis.io/api/#/nft/getNFTMetadata
