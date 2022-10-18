@@ -3,7 +3,7 @@
 
 **- Title:** "NFT Aggregator"
 
-**- Installation:**
+**- Installation:**  pip install -r /path/to/requirements.txt
 
     - 1) Psycopg2 is the most popular PostgreSQL database adapter for the Python programming language.
     
@@ -12,8 +12,7 @@
     - 3) render_template is a Flask function from the flask.templating package. render_template is used to generate output from a template file based on the Jinja2 engine that is found in the application's templates folder.
     
     - 4) The request object is a Request subclass and provides all of the attributes Werkzeug defines plus a few Flask specific ones.
-     
-         **pip install -r /path/to/requirements.txt**
+    
         
 **- Usage:** When User provides an address of an NFT and presses the button, it should show full information about that NFT and store all the data inside the Postgres                Database.
 
